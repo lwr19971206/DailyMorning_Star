@@ -141,10 +141,6 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
                 "value": "{} {}".format(today, week),
                 "color": get_color()
             },
-            "lindate": {
-                "value": "{} {}".format(today, week),
-                "color": get_color()
-            },
             "city": {
                 "value": city_name,
                 "color": get_color()
@@ -184,7 +180,6 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             birthday_data = "距离{}的生日还有{}天".format(value["name"], birth_day)
         # 将生日数据插入data
         data["data"][key] = {"value": birthday_data, "color": get_color()}
-        
         
     headers = {
         'Content-Type': 'application/json',
